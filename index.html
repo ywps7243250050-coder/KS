@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#075bd8">
+<title>KostService — Solusi Praktis untuk Semua Kebutuhan Anak Kos</title>
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#eaf1ff;font-family:Arial,Helvetica,sans-serif;color:#10234a}
+  .page{position:relative;width:min(100%,1536px);margin:0 auto;line-height:0}
+  .design{display:block;width:100%;height:auto}
+  .hotspot{position:absolute;display:block;border:0;background:transparent;cursor:pointer;border-radius:18px;z-index:2}
+  .hotspot:focus-visible{outline:3px solid #ffbd00;outline-offset:2px;background:#ffffff22}
+  /* Area klik mengikuti elemen pada gambar desain 1536 × 1024. */
+  .brand{left:4.8%;top:0.5%;width:25%;height:8.5%}
+  .nav-home{left:34%;top:1.2%;width:7%;height:5%}
+  .nav-services{left:41%;top:1.2%;width:8%;height:5%}
+  .nav-price{left:49%;top:1.2%;width:7%;height:5%}
+  .nav-about{left:56%;top:1.2%;width:9%;height:5%}
+  .nav-testimonial{left:65%;top:1.2%;width:8%;height:5%}
+  .nav-contact{left:73%;top:1.2%;width:7%;height:5%}
+  .top-wa{left:79%;top:1%;width:15%;height:5.5%}
+  .hero-book{left:5.8%;top:34.5%;width:18%;height:5.2%}
+  .hero-wa{left:24.3%;top:34.5%;width:12.5%;height:5.2%}
+  .see-services{left:84%;top:42.5%;width:11%;height:2.2%}
+  .service{top:63.8%;height:3%;width:9.8%}
+  .s1{left:8.8%}.s2{left:27.5%}.s3{left:46.1%}.s4{left:64.1%}.s5{left:82%}
+  .learn{left:4%;top:87.2%;width:12%;height:4.2%}
+  .testimonials{left:62.5%;top:76.7%;width:8.5%;height:3%}
+  .footer-home{left:33%;top:94.8%;width:6%;height:4%}
+  .footer-services{left:39%;top:94.8%;width:5.5%;height:4%}
+  .footer-price{left:45%;top:94.8%;width:4%;height:4%}
+  .footer-about{left:49%;top:94.8%;width:8%;height:4%}
+  .footer-testimonial{left:57%;top:94.8%;width:7%;height:4%}
+  .footer-contact{left:64%;top:94.8%;width:6%;height:4%}
+  .footer-wa{left:71%;top:76.5%;width:25%;height:15%}
+  .social-ig{left:70.5%;top:94%;width:3.5%;height:5%}
+  .social-tiktok{left:74%;top:94%;width:3.5%;height:5%}
+  .social-youtube{left:77%;top:94%;width:3.5%;height:5%}
+  .social-other{left:80%;top:94%;width:3.5%;height:5%}
+  .modal-backdrop{position:fixed;inset:0;background:#071631b8;display:none;align-items:center;justify-content:center;padding:18px;z-index:10;line-height:1.4}
+  .modal-backdrop.show{display:flex}
+  .modal{width:min(100%,520px);max-height:90vh;overflow:auto;background:white;border-radius:20px;padding:24px;box-shadow:0 18px 60px #0005;position:relative}
+  .modal h2{margin:0 34px 8px 0;color:#075bd8;font-size:24px}
+  .modal p{margin:0 0 16px;color:#52617c}
+  .close{position:absolute;right:15px;top:12px;border:0;background:#edf3ff;border-radius:50%;width:34px;height:34px;font-size:22px;cursor:pointer}
+  label{display:block;font-weight:700;font-size:14px;margin:12px 0 5px}
+  input,select,textarea{width:100%;border:1px solid #cbd6e8;border-radius:10px;padding:11px;font:inherit;color:#15264b;background:#fff}
+  textarea{min-height:78px;resize:vertical}
+  .submit{margin-top:16px;width:100%;border:0;border-radius:12px;padding:13px;background:#0863df;color:white;font-weight:700;font-size:16px;cursor:pointer}
+  .service-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
+  .service-list button,.action-link{border:1px solid #d8e4f7;background:#f5f8ff;border-radius:12px;padding:13px;text-align:left;color:#123064;font-weight:700;cursor:pointer}
+  .service-list small{display:block;font-weight:400;color:#63728e;margin-top:4px}
+  .price{font-size:28px;font-weight:800;color:#075bd8;margin:12px 0}
+  .note{font-size:12px;color:#6a7890;margin-top:12px}
+  @media(max-width:600px){.modal{padding:20px}.modal h2{font-size:21px}.service-list{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="page" aria-label="Beranda KostService">
+  <img class="design" src="beranda-kostservice.png" alt="Tampilan beranda KostService dengan katalog layanan cleaning, laundry, delivery, repair, dan care">
+  <a class="hotspot brand" href="#" data-panel="home" aria-label="KostService - Beranda"></a>
+  <a class="hotspot nav-home" href="#" data-panel="home" aria-label="Beranda"></a>
+  <a class="hotspot nav-services" href="#" data-panel="services" aria-label="Layanan"></a>
+  <a class="hotspot nav-price" href="#" data-panel="price" aria-label="Harga"></a>
+  <a class="hotspot nav-about" href="#" data-panel="about" aria-label="Tentang Kami"></a>
+  <a class="hotspot nav-testimonial" href="#" data-panel="testimonials" aria-label="Testimoni"></a>
+  <a class="hotspot nav-contact" href="#" data-panel="contact" aria-label="Kontak"></a>
+  <a class="hotspot top-wa" href="https://wa.me/6282114933545" target="_blank" rel="noopener" aria-label="Pesan melalui WhatsApp"></a>
+  <button class="hotspot hero-book" data-book aria-label="Pesan layanan sekarang"></button>
+  <a class="hotspot hero-wa" href="https://wa.me/6282114933545?text=Halo%20KostService%2C%20saya%20ingin%20bertanya%20tentang%20layanan." target="_blank" rel="noopener" aria-label="Chat WhatsApp"></a>
+  <button class="hotspot see-services" data-panel="services" aria-label="Lihat semua layanan"></button>
+  <button class="hotspot service s1" data-service="Kost Cleaning" aria-label="Pesan Kost Cleaning"></button>
+  <button class="hotspot service s2" data-service="Kost Laundry" aria-label="Pesan Kost Laundry"></button>
+  <button class="hotspot service s3" data-service="Kost Delivery" aria-label="Pesan Kost Delivery"></button>
+  <button class="hotspot service s4" data-service="Kost Repair" aria-label="Pesan Kost Repair"></button>
+  <button class="hotspot service s5" data-service="Kost Care" aria-label="Pesan Kost Care"></button>
+  <button class="hotspot learn" data-panel="about" aria-label="Pelajari lebih lanjut"></button>
+  <button class="hotspot testimonials" data-panel="testimonials" aria-label="Lihat semua testimoni"></button>
+  <a class="hotspot footer-home" href="#" data-panel="home" aria-label="Beranda footer"></a>
+  <a class="hotspot footer-services" href="#" data-panel="services" aria-label="Layanan footer"></a>
+  <a class="hotspot footer-price" href="#" data-panel="price" aria-label="Harga footer"></a>
+  <a class="hotspot footer-about" href="#" data-panel="about" aria-label="Tentang Kami footer"></a>
+  <a class="hotspot footer-testimonial" href="#" data-panel="testimonials" aria-label="Testimoni footer"></a>
+  <a class="hotspot footer-contact" href="#" data-panel="contact" aria-label="Kontak footer"></a>
+  <a class="hotspot footer-wa" href="https://wa.me/6282114933545?text=Halo%20KostService%2C%20saya%20ingin%20memesan%20layanan." target="_blank" rel="noopener" aria-label="Pesan sekarang melalui WhatsApp"></a>
+  <a class="hotspot social-ig" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"></a>
+  <a class="hotspot social-tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"></a>
+  <a class="hotspot social-youtube" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"></a>
+  <a class="hotspot social-other" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Media sosial"></a>
+</main>
+
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <section class="modal">
+    <button class="close" id="close" aria-label="Tutup">&times;</button>
+    <div id="modal-content"></div>
+  </section>
+</div>
+<script>
+const modal=document.getElementById('modal');
+const content=document.getElementById('modal-content');
+let selectedService='';
+function openModal(html){content.innerHTML=html;modal.classList.add('show');}
+function closeModal(){modal.classList.remove('show');}
+document.getElementById('close').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+function booking(service=''){
+  selectedService=service;
+  openModal(`
+    <h2 id="modal-title">Pesan Layanan KostService</h2>
+    <p>Isi data berikut. Pesanan akan diteruskan ke WhatsApp KostService.</p>
+    <form id="booking-form">
+      <label for="nama">Nama</label><input id="nama" name="nama" placeholder="Nama Anda" required>
+      <label for="kamar">Alamat / nomor kamar kos</label><input id="kamar" name="kamar" placeholder="Contoh: Kos Melati, kamar 203" required>
+      <label for="layanan">Pilih layanan</label>
+      <select id="layanan" name="layanan" required>
+        <option value="">-- Pilih layanan --</option>
+        ${['Kost Cleaning','Kost Laundry','Kost Delivery','Kost Repair','Kost Care'].map(s=>`<option ${s===service?'selected':''}>${s}</option>`).join('')}
+      </select>
+      <label for="tanggal">Tanggal layanan yang diinginkan</label><input id="tanggal" name="tanggal" type="date" required>
+      <label for="detail">Detail pesanan (opsional)</label><textarea id="detail" name="detail" placeholder="Jelaskan kebutuhan Anda..."></textarea>
+      <button class="submit" type="submit">Kirim Pesanan via WhatsApp</button>
+    </form>
+    <div class="note">Harga akhir dan jadwal akan dikonfirmasi oleh admin melalui WhatsApp.</div>
+  `);
+  document.getElementById('booking-form').addEventListener('submit',e=>{
+    e.preventDefault();
+    const f=new FormData(e.currentTarget);
+    const msg=`Halo KostService, saya ingin memesan layanan.%0A nama: ${encodeURIComponent(f.get('nama'))}%0AAlamat/nomor kamar: ${encodeURIComponent(f.get('kamar'))}%0ALayanan: ${encodeURIComponent(f.get('layanan'))}%0ATanggal: ${encodeURIComponent(f.get('tanggal'))}%0ADetail: ${encodeURIComponent(f.get('detail')||'-')}`;
+    window.open('https://wa.me/6282114933545?text='+msg,'_blank','noopener');
+    closeModal();
+  });
+}
+const panels={
+ home:`<h2 id="modal-title">Selamat datang di KostService!</h2><p>Solusi praktis untuk kebutuhan anak kos. Pilih layanan yang Anda butuhkan dan pesan langsung melalui WhatsApp.</p><button class="submit" data-book>Pesan Layanan Sekarang</button>`,
+ services:`<h2 id="modal-title">Katalog Layanan Kami</h2><p>Pilih salah satu layanan untuk mengisi formulir pemesanan.</p><div class="service-list">${[['Kost Cleaning','Kamar bersih, nyaman, dan sehat'],['Kost Laundry','Cuci pakaian cepat dan bersih'],['Kost Delivery','Antar kebutuhan Anda'],['Kost Repair','Perbaikan ringan dan cepat'],['Kost Care','Perawatan berkala']].map(([n,d])=>`<button data-service="${n}">${n}<small>${d}</small></button>`).join('')}</div>`,
+ price:`<h2 id="modal-title">Harga Layanan</h2><p>Harga awal sesuai informasi pada desain.</p><div class="price">Mulai Rp25.000</div><p>Biaya dapat berbeda sesuai jenis layanan, lokasi, dan tingkat pekerjaan. Konfirmasi harga final melalui admin.</p><button class="submit" data-book>Pesan Sekarang</button>`,
+ about:`<h2 id="modal-title">Tentang KostService</h2><p>KostService hadir sebagai solusi praktis untuk membantu kebutuhan anak kos, mulai dari cleaning, laundry, delivery, hingga perbaikan ringan dan perawatan berkala.</p><p><b>Komitmen kami:</b> pelayanan cepat, aman dan terpercaya, customer service responsif, serta harga transparan.</p><button class="submit" data-book>Gunakan Layanan Kami</button>`,
+ testimonials:`<h2 id="modal-title">Testimoni Pelanggan</h2><p>“Pelayanannya cepat, kamar jadi lebih bersih dan nyaman. Recommended banget untuk anak kos!”</p><b>— Siti Rahma, Mahasiswi</b><p style="margin-top:14px">Kami senang membantu kamar kos Anda tetap nyaman.</p>`,
+ contact:`<h2 id="modal-title">Hubungi KostService</h2><p>Customer service kami siap membantu kebutuhan kos Anda.</p><p><b>WhatsApp: 0821-1493-3545</b></p><a class="submit" style="display:block;text-align:center;text-decoration:none" href="https://wa.me/6282114933545" target="_blank" rel="noopener">Chat WhatsApp Sekarang</a>`
+};
+document.addEventListener('click',e=>{
+  const service=e.target.closest('[data-service]');
+  const book=e.target.closest('[data-book]');
+  const panel=e.target.closest('[data-panel]');
+  if(service){booking(service.dataset.service);return;}
+  if(book){booking();return;}
+  if(panel){e.preventDefault();const key=panel.dataset.panel;openModal(panels[key]||panels.home);}
+});
+</script>
+</body>
+</html>
